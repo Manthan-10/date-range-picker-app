@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# Date Range Picker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app is simple React component that allows users to select weekdays (Monday through Friday) and prevents them from selecting weekends (Saturday and
+Sunday). 
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The component has the following features:
+● The component allows users to select a date range defined by a start date and an end date. The start date and an end date will always be 
+  a  weekday and will never be a weekend.
+  ![Date Range Picker](/public/image1.png)
+● The selected date range highlights only weekdays and weekends are not highlighted.
+  ![Highlights only weekdays](/public/image2.png)
+● The user will be able to change the year displayed in the date picker.
+  ![Year Change](/public/image3.png)
+● The user will be able to change the month displayed in the date picker.
+  ![Month Change](/public/image4.png)
+● The component includes a change handler that returns the selected date range and any weekend dates within that range. As an example, 
+  if the range selected is December 1st, 2022, to December 15th, 2022, the returned values should be an array containing the date range as the first element (e.g. [2022-12-01, 2022-12-15]) and an array of weekend dates within that range as the second element (e.g. [2022-12-03,
+  2022-12-04, 2022-12-10, 2022-12-11]).
+  ![Example](/public/image5.png)
+● The component includes a prop that allows the user to input predefined ranges, such as the last 7 days or last 30 days. 
+  These predefined ranges are displayed below the calendars.
+  ![Predefined 7 days](/public/image6.png)
+  ![Predefined 30 days](/public/image7.png)

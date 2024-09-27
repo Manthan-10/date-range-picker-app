@@ -1,13 +1,113 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.date-range-picker {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #c5bbbb;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: #333;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 48%;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.day-names {
+  display: contents; /* Allow grid items to be direct children */
+}
+
+.day-name {
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 0;
+  color: #666;
+}
+
+.date-cell {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.date-cell:hover {
+  background-color: #f4e6e6;
+}
+
+.date-cell.highlighted.weekend {
+  background-color:white;
+}
+
+.highlighted {
+  background-color: hsl(211, 100%, 50%);
+}
+
+.selected {
+  background-color: hsl(211, 100%, 50%);
+  color: white;
+}
+
+.weekend {
+  color: #363434;
+  opacity: 0.6;
+}
+
+.predefined-ranges {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  flex: 1;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.selected-range {
+  margin-top: 15px;
+  font-size: 16px;
+  color:#333;
+}
+
+.selected-range p {
+  margin: 5px 0;
 }

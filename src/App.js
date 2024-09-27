@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import DateRangePicker from './Components/DateRangePicker';
 
-function App() {
+const App = () => {
+  const handleDateRangeChange = (dateRange, weekendDates) => {
+    console.log('Selected Date Range:', dateRange);
+    console.log('Weekend Dates:', weekendDates);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <DateRangePicker 
+        predefinedRanges={['Last 7 Days', 'Last 30 Days']}
+        onChange={handleDateRangeChange}
+      />
     </div>
   );
-}
+};
 
 export default App;
